@@ -1,6 +1,9 @@
 [font]
 size = 18
 
+[window]
+option_as_alt = "both"
+
 # Colors (Gruvbox dark)
 
 # Default colors

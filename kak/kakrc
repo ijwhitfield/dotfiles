@@ -28,3 +28,7 @@ map -docstring "paste the clipboard" global user p "<a-!> xsel<ret>"
 
 # Shortcut to quickly exit the editor
 define-command -docstring "save and quit" x "write-all; quit"
+
+# expandtab-like mappings
+map global insert <tab> '<a-;><a-gt>'
+map global insert <s-tab> '<a-;><a-lt>'
