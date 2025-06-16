@@ -2,6 +2,11 @@ theme = "gruvbox"
 
 [editor]
 line-number = "relative"
+continue-comments = false
+auto-pairs = false
 
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.soft-wrap]
+enable = true
