@@ -7,3 +7,17 @@ comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
 language-servers = [ ]  # disable all language servers
 indent = { tab-width = 4, unit = "  " }
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[[language]]
+name = "c"
+scope = "source.c"
+injection-regex = "c"
+file-types = ["c", "h"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+#language-servers = [ "clangd" ]  # lsp bad
+indent = { tab-width = 8, unit = "\t" }
