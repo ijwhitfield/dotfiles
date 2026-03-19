@@ -12,6 +12,22 @@ indent = { tab-width = 4, unit = "  " }
 command = "ruff"
 args = ["server"]
 
+[language-server.zuban]
+command = "zuban"
+args = ["server"]
+
+[[language]]
+name = "python"
+scope = "source.python"
+injection-regex = "py(thon)?"
+file-types = ["py", "pyi", "py3", "pyw", "ptl", "rpy", "cpy", "ipy", "pyt", { glob = ".python_history" }, { glob = ".pythonstartup" }, { glob = ".pythonrc" }, { glob = "*SConstruct" }, { glob = "*SConscript" }, { glob = "*sconstruct" }]
+shebangs = ["python", "uv"]
+roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
+comment-token = "#"
+language-servers = ["zuban", "ty", "ruff", "jedi", "pylsp"]
+# TODO: pyls needs utf-8 offsets
+indent = { tab-width = 4, unit = "    " }
+
 [[language]]
 name = "c"
 scope = "source.c"
